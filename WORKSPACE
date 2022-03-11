@@ -41,13 +41,6 @@ load("@io_bazel_rules_scala//scala:toolchains.bzl", "scala_register_toolchains")
 
 scala_register_toolchains()
 
-
-load("@io_bazel_rules_scala//testing:scalatest.bzl", "scalatest_repositories", "scalatest_toolchain")
-
-scalatest_repositories()
-
-scalatest_toolchain()
-
 load("@io_bazel_rules_scala//scala_proto:scala_proto.bzl", "scala_proto_repositories")
 
 scala_proto_repositories()
@@ -56,7 +49,18 @@ load("@io_bazel_rules_scala//scala_proto:toolchains.bzl", "scala_proto_register_
 
 scala_proto_register_toolchains()
 
-load("@io_bazel_rules_scala//specs2:specs2_junit.bzl", "specs2_junit_repositories")
+load("@io_bazel_rules_scala//testing:scalatest.bzl", "scalatest_repositories", "scalatest_toolchain")
+
+scalatest_repositories()
+
+scalatest_toolchain()
+
+load("@io_bazel_rules_scala//testing:specs2_junit.bzl", "specs2_junit_repositories", "specs2_junit_toolchain")
 
 specs2_junit_repositories()
+
+specs2_junit_toolchain()
+
+
+
 

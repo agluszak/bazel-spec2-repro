@@ -1,10 +1,10 @@
 package example
 
-import org.specs2.*
+import org.specs2.Specification
 
 /** This specification shows that it is possible to use the example code directly in the specification
   */
-class HelloWorldAutoExamplesSpec extends Specification {
+class ExampleSpec2Test extends Specification {
   def is = s2"""
 
   This is a specification to check the 'Hello world' string
